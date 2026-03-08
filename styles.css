@@ -129,9 +129,10 @@ nav {
 /* ====== HERO & PAGE HEADER (shared) ====== */
 .hero,
 .page-header {
-    background: url('images/hero_background.jpg');
-    background-size: 110%;
-    background-position: 0px -600px;
+    background-color: var(--primary);
+    background-image: url('images/hero_background.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
@@ -140,8 +141,6 @@ nav {
 .hero {
     height: 400px;
     padding: 0 20px;
-    background-size: 110%;
-    background-position: -40px -470px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -785,7 +784,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero,
     .page-header {
         padding: 60px 20px;
     }
