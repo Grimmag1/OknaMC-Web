@@ -1,3 +1,44 @@
+const HEADER_HTML = `
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/icon.png" alt="Logo">
+            <span>OKNA & DVEŘE</span>
+        </a>
+        <ul class="desktop-menu">
+            <li><a href="index.html">Hlavní stránka</a></li>
+            <li><a href="services.html">Služby</a></li>
+            <li><a href="about.html">O nás</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <button id="menu-btn" aria-label="Menu">☰</button>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="index.html">Hlavní stránka</a>
+        <a href="services.html">Služby</a>
+        <a href="about.html">O nás</a>
+        <a href="contact.html">Kontakt</a>
+    </div>
+</header>`;
+
+const FOOTER_HTML = `
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Kontaktní údaje</h4>
+            <p>Email: martin.cepica@email.cz</p>
+            <p>Tel: +420 739 249 434</p>
+        </div>
+        <div class="footer-section">
+            <h4>MC OKNA & DVEŘE</h4>
+            <p>Poctivé řešení, na které se můžete spolehnout</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 MC OKNA & DVEŘE – Všechna práva vyhrazena
+    </div>
+</footer>`;
+
 function initMobileMenu() {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -28,16 +69,13 @@ function setActiveNav() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Load shared header and footer
-    Promise.all([
-        fetch('header.html').then(r => r.text()),
-        fetch('footer.html').then(r => r.text())
-    ]).then(([headerHtml, footerHtml]) => {
-        document.getElementById('header-placeholder').innerHTML = headerHtml;
-        document.getElementById('footer-placeholder').innerHTML = footerHtml;
-        setActiveNav();
-        initMobileMenu();
-    });
+    // Inject shared header and footer
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (headerPlaceholder) headerPlaceholder.innerHTML = HEADER_HTML;
+    if (footerPlaceholder) footerPlaceholder.innerHTML = FOOTER_HTML;
+    setActiveNav();
+    initMobileMenu();
 
     // Contact form handling via Formspree
     const contactForm = document.getElementById('contact-form');
