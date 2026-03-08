@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     item.className = 'gallery-item';
                     item.innerHTML = `
                         <img src="images/realizace/${filename}" alt="Realizace ${i + 1}">
-                        <div class="gallery-overlay"><h3>Realizace ${i + 1}</h3></div>
                     `;
                     galleryGrid.appendChild(item);
                 });
