@@ -441,6 +441,13 @@ section h2 {
     font-size: 28px;
 }
 
+.gallery-back {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
 .services-carousels {
     display: grid;
     grid-template-columns: 1fr 1fr;
