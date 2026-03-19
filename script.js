@@ -86,6 +86,18 @@ function initCarousel() {
     wrapper.querySelector('.carousel-next').addEventListener('click', () => {
         goTo((current + 1) % total);
     });
+
+    let touchStartX = 0;
+    wrapper.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+            goTo(diff > 0 ? (current + 1) % total : (current - 1 + total) % total);
+        }
+    }, { passive: true });
 }
 
 function setActiveNav() {

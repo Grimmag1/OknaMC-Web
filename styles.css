@@ -777,6 +777,27 @@ footer {
         border-top: 2px solid var(--light);
     }
 
+    .carousel-track {
+        height: auto;
+    }
+
+    .carousel-track img.active {
+        height: auto;
+    }
+
+    .carousel-pane:first-child .carousel-btn {
+        top: auto;
+        bottom: 0;
+        transform: translateY(50%);
+        z-index: 10;
+    }
+
+    .carousel-pane:last-child .carousel-btn {
+        top: 0;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
     .desktop-menu {
         display: none;
     }
