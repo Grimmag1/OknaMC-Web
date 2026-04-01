@@ -277,7 +277,8 @@ section h2 {
 }
 
 .intro-box {
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     padding: 80px 30px;
     border-radius: 12px;

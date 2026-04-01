@@ -26,7 +26,7 @@ const FOOTER_HTML = `
     <div class="footer-content">
         <div class="footer-section">
             <h4>Kontaktní údaje</h4>
-            <p>Email: martin.cepica@email.cz</p>
+            <p>E-mail: martin.cepica@email.cz</p>
             <p>Tel: +420 739 249 434</p>
             <p>IČ 72987324 DIČ CZ7202135699</p>
         </div>
