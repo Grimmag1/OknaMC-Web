@@ -98,6 +98,11 @@ function initCarousel() {
             goTo(diff > 0 ? (current + 1) % total : (current - 1 + total) % total);
         }
     }, { passive: true });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') goTo((current + 1) % total);
+        if (e.key === 'ArrowLeft') goTo((current - 1 + total) % total);
+    });
 }
 
 function setActiveNav() {
