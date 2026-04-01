@@ -28,7 +28,7 @@ const FOOTER_HTML = `
             <h4>Kontaktní údaje</h4>
             <p>E-mail: martin.cepica@email.cz</p>
             <p>Tel: +420 739 249 434</p>
-            <p>IČ 72987324 DIČ CZ7202135699</p>
+            <p>IČ: 72987324 DIČ: CZ7202135699</p>
         </div>
         <div class="footer-section">
             <h4>MC OKNA & DVEŘE</h4>
